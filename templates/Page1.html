@@ -1,0 +1,12 @@
+{% extends "layout.html"%}
+{%set title = "Add to Cart" %}
+{%block content%}
+	<h3>1 {{ email }} is ready to send </h3>
+	<form action="/" method="POST">
+	<button type="submit"class="btn btn-outline-success btn-lg" > yeet</button>
+	</form>
+
+	<form action="/checkout" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg">Checkout</button>
+	</form>
+{% endblock %}

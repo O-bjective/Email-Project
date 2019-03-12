@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% set title="Store" %}
+
+{% block content %}
+	<h1>Store</h1>
+	<form action="/Page1?item=a" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Teacher 1</button>
+	</form>
+	<form action="/Page1?item=b" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Teacher 2</button>
+	</form>
+	<form action="/Page1?item=c" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Teacher 3</button>
+	</form>
+	<p> Email to send: {{Emails }} </p>
+	{% if itemsincart >0 %}
+	<form action="/Page2" method="POST">
+	<button type="submit" class="btn btn-outline-success btn-lg"> Send Email</button>
+	</form>
+	{% endif %}
+{% endblock %}

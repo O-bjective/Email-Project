@@ -36,13 +36,13 @@ def renderAddToCart():
 
     elif request.args["item"]=="c":
         session["item_c"] += 1
-    return render_template("addToCart.html", item_name = "Item " + str(request.args["item"]))
+    return render_template("Page1.html", item_name = "Item" + str(request.args["item"]))
 
 @app.route('/Page2',methods=["POST","GET"])
 def renderCheckout():
     if "itemsincart" not in session:
         return redirect(url_for("renderStore"))
-    return render_template("checkout.html",itemsincart=session["itemsincart"])
+    return render_template("Page2.html",itemsincart=session["itemsincart"])
 
 @app.route('/Page3',methods=["POST","GET"])
 def renderBought():
@@ -50,7 +50,7 @@ def renderBought():
         return redirect(url_for("renderStore"))
     items = session["itemsincart"]
     session["itemsincart"] = 0
-    return render_template("bought.html",itemsincart=str(items))
+    return render_template("Page3.html",itemsincart=str(items))
 
 if __name__=="__main__":
     app.run(debug=True)

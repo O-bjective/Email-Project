@@ -1,7 +1,7 @@
 {% extends "layout.html"%}
 {%set title = "You bought "+itemsincart+" items" %}
 {%block content%}
-	<h3> You just bought {{ itemsincart }} items.</h3>
+	<h3> You sent {{ Emails }} emails.</h3>
 
 	<form action="/?clear=true" method="POST">
 	<button type="submit" class="btn btn-outline-success btn-lg">Return to Store</button>
